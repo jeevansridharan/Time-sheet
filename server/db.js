@@ -3,7 +3,7 @@ const path = require('path');
 
 const DB_PATH = path.join(__dirname, 'db.json');
 
-let _db = { users: [], entries: [], projects: [], tasks: [], teams: [] };
+let _db = { users: [], entries: [], projects: [], tasks: [], teams: [], people: [] };
 
 function load() {
   try {
@@ -21,7 +21,7 @@ function load() {
     }
   } catch (err) {
     console.error('Failed to load DB:', err);
-    _db = { users: [], entries: [], projects: [], tasks: [], teams: [] };
+    _db = { users: [], entries: [], projects: [], tasks: [], teams: [], people: [] };
     save();
   }
 }
